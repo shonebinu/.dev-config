@@ -1,0 +1,57 @@
+[[language]]
+name = "html"
+language-servers = ["vscode-html-language-server", "emmet-ls"]
+
+
+[[language]]
+name = "css"
+language-servers = ["vscode-css-language-server", "emmet-ls"]
+
+
+[[language]]
+name = "javascript"
+language-servers = ["typescript-language-server"]
+formatter = {command = "dprint", args = ["fmt", "--stdin", "jsx"]}
+auto-format = true
+
+
+[[language]]
+name = "markdown"
+language-servers = ["marksman", "ltex-ls"]
+formatter = {command = "dprint", args = ["fmt", "--stdin", "md"]}
+auto-format = true
+soft-wrap.enable = true
+
+
+[[language]]
+name = "bash"
+language-servers = ["bash-language-server"]
+
+
+[[languae]]
+name = "json"
+language-servers = ["vscode-json-language-server"]
+
+
+[[language]]
+name = "php"
+language-servers = ["phpactor"]
+
+
+[[language]]
+name = "python"
+language-servers = ["pylsp"]
+formatter = { command = "black", args = ["--quiet", "-"] }
+auto-format = true
+
+[[language]]
+name = "nix"
+auto-format = true
+formatter.command = "alejandra"
+language-servers = ["nil"]
+
+
+
+[language-server]
+emmet-ls = { command = "emmet-ls", args = ["--stdio"] }
+phpactor = { command = "phpactor", args = ["language-server"] }
