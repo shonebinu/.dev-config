@@ -9,10 +9,9 @@
   home.stateVersion = "23.11";
 
   home.packages = with pkgs; [
-    # foot is my preferred term with JetBrains Mono font and onedark theme, set the shell as fish -c zellij
+    # wezterm is my preferred term with JetBrains Mono font and onedark theme
     # dont forget to switch caps lock key with esc key with DE settings or a tool like xremap
     helix
-    zellij
     lazygit
     wl-clipboard
     volta # used to install node
@@ -35,8 +34,6 @@
   home.file = {
     ".config/helix/config.toml".source = ./assets/helix/config.toml;
     ".config/helix/languages.toml".source = ./assets/helix/languages.toml;
-
-    ".config/zellij/config.kdl".source = ./assets/zellij/config.kdl;
   };
 
   home.sessionVariables = {
