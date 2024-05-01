@@ -43,6 +43,8 @@
   programs.fish = {
     enable = true;
     interactiveShellInit = ''
+      fish_add_path ~/.volta/bin
+
       function cheat
           curl cheat.sh/$argv
       end
