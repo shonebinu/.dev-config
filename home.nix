@@ -27,8 +27,6 @@
     nil
     alejandra
     emmet-ls
-
-    (nerdfonts.override {fonts = ["JetBrainsMono"];})
   ];
 
   home.file = {
