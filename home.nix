@@ -10,10 +10,10 @@
 
   home.packages = with pkgs; [
     # wezterm is my preferred term with JetBrains Mono font and onedark theme
+    # wl-clipboard as the preferred clipboard manager
     # dont forget to switch caps lock key with esc key with DE settings or a tool like xremap
     helix
     lazygit
-    wl-clipboard
     volta # used to install node
     dprint
     nodePackages.typescript-language-server
