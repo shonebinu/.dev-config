@@ -3,6 +3,13 @@
   pkgs,
   ...
 }: {
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
+      allowUnfreePredicate = _: true;
+    };
+  };
+
   home.username = "shone";
   home.homeDirectory = "/home/shone";
 
@@ -18,10 +25,11 @@
     dprint
     nodePackages.typescript-language-server
     nodePackages.bash-language-server
+    nodePackages.intelephense
+    phpactor
     vscode-langservers-extracted
     marksman
     ltex-ls
-    phpactor
     python311Packages.python-lsp-server
     black
     nil
