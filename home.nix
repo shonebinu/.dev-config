@@ -22,6 +22,7 @@
     helix
     lazygit
     volta # used to install node
+    biome
     dprint
     nodePackages.typescript-language-server
     nodePackages.bash-language-server
@@ -38,8 +39,8 @@
   ];
 
   home.file = {
-    ".config/helix/config.toml".source = ./assets/helix/config.toml;
-    ".config/helix/languages.toml".source = ./assets/helix/languages.toml;
+    ".config/helix/config.toml".source = ./helix/config.toml;
+    ".config/helix/languages.toml".source = ./helix/languages.toml;
   };
 
   home.sessionVariables = {
