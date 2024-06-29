@@ -13,7 +13,7 @@
   home.username = "shone";
   home.homeDirectory = "/home/shone";
 
-  home.stateVersion = "23.11";
+  home.stateVersion = "24.05";
 
   home.packages = with pkgs; [
     # wezterm is my preferred term with JetBrains Mono font and onedark theme
@@ -28,6 +28,7 @@
     nodePackages.bash-language-server
     nodePackages.intelephense
     phpactor
+    php83Packages.php-cs-fixer
     vscode-langservers-extracted
     marksman
     ltex-ls
@@ -36,11 +37,14 @@
     nil
     alejandra
     emmet-ls
+    zoxide
+    fzf
   ];
 
   home.file = {
     ".config/helix/config.toml".source = ./helix/config.toml;
     ".config/helix/languages.toml".source = ./helix/languages.toml;
+    ".local/bin/php_format".source = ./bin/php_format;
   };
 
   home.sessionVariables = {
@@ -50,7 +54,12 @@
   programs.fish = {
     enable = true;
     interactiveShellInit = ''
+      fish_add_path ~/.local/bin
       fish_add_path ~/.volta/bin
+
+      zoxide init fish | source
+
+      alias cd="z"
 
       function cheat
           curl cheat.sh/$argv
@@ -64,6 +73,9 @@
           set template_path (xdg-user-dir DOCUMENTS)/Obsidian\ Vault/Templates/Journal.md
           set journal_path (xdg-user-dir DOCUMENTS)/Obsidian\ Vault/Journal/(date '+%Y/%m/%a %d-%m-%Y.md')
 
+          # Ensure directory exists before copying
+          mkdir -p (dirname $journal_path)
+
           if test ! -f $journal_path
               cp $template_path $journal_path
           end
@@ -72,5 +84,6 @@
       end
     '';
   };
+
   programs.home-manager.enable = true;
 }

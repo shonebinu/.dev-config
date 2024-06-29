@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# Create a temporary file to store the input
+tmpfile=$(mktemp)
+
+# Read input from stdin and save it to the temporary file
+cat > "$tmpfile"
+
+# Use php-cs-fixer to fix the temporary file, suppressing stdout and stderr
+php-cs-fixer fix "$tmpfile" > /dev/null 2>&1
+
+# Output the fixed content of the temporary file to stdout
+cat "$tmpfile"
+
+# Clean up: Delete the temporary file
+rm "$tmpfile"
