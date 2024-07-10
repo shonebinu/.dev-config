@@ -27,7 +27,6 @@
     nodePackages.typescript-language-server
     nodePackages.bash-language-server
     nodePackages.intelephense
-    phpactor
     php83Packages.php-cs-fixer
     vscode-langservers-extracted
     marksman
