@@ -30,6 +30,7 @@
     nodePackages.intelephense
     php83Packages.php-cs-fixer
     vscode-langservers-extracted
+    jdt-language-server
     marksman
     ltex-ls
     python311Packages.python-lsp-server
