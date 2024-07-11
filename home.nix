@@ -24,6 +24,7 @@
     volta # used to install node
     biome
     dprint
+    zellij
     nodePackages.typescript-language-server
     nodePackages.bash-language-server
     nodePackages.intelephense
