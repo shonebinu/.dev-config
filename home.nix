@@ -59,8 +59,6 @@
 
       zoxide init fish | source
 
-      alias cd="z"
-
       function cheat
           curl cheat.sh/$argv
       end
