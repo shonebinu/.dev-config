@@ -53,7 +53,7 @@ language-servers = ["bash-language-server"]
 
 [[language]]
 name = "php"
-language-servers = ["intelephense"]
+language-servers = ["phpactor"]
 auto-format = true
 formatter.command = "php_format" # since php-cs-fixer doesn't take stdin, i made this myself
 
