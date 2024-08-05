@@ -1,4 +1,4 @@
-theme = "jetbrains_dark"
+theme = "onedark"
 
 [editor]
 line-number = "relative"
