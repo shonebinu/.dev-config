@@ -16,7 +16,7 @@
   home.stateVersion = "24.05";
 
   home.packages = with pkgs; [
-    # wezterm is my preferred term with JetBrains Mono font and onedark theme
+    # wezterm is my preferred term with JetBrains Mono font and onedark theme or jet brains new dark ui font
     # wl-clipboard as the preferred clipboard manager
     # dont forget to switch caps lock key with esc key with DE settings or a tool like xremap
     helix
@@ -58,8 +58,8 @@
     interactiveShellInit = ''
       fish_add_path ~/.local/bin
       fish_add_path ~/.volta/bin
-      fish_add_path ~/.nix-profile/bin 
-      fish_add_path /nix/var/nix/profiles/default/bin 
+      fish_add_path ~/.nix-profile/bin
+      fish_add_path /nix/var/nix/profiles/default/bin
 
       zoxide init fish | source
 
